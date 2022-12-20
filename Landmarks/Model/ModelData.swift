@@ -10,6 +10,8 @@ import Combine
 
 final class ModelData: ObservableObject {
     @Published var landmarks: [Landmark] = load("landmarkData.json")
+    // Don't need Published since this data won't be modified so won't ever need to update the UI. Won't be subscribed to.
+    var hikes: [Hike] = load("hikeData.json")
 }
 
 func load<T: Decodable>(_ filename: String) -> T {
