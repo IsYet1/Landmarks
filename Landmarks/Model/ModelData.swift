@@ -12,6 +12,7 @@ final class ModelData: ObservableObject {
     @Published var landmarks: [Landmark] = load("landmarkData.json")
     // Don't need Published since this data won't be modified so won't ever need to update the UI. Won't be subscribed to.
     var hikes: [Hike] = load("hikeData.json")
+    @Published var profile = Profile.default
     
     var features: [Landmark] {
         landmarks.filter { $0.isFeatured }
