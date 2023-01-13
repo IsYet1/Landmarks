@@ -10,6 +10,7 @@ import UIKit
 
 struct PageViewcOntroller<Page: View>: UIViewControllerRepresentable {
     var pages: [Page]
+    @Binding var currentPage: Int
     
     func makeCoordinator() -> Coordinator {
         Coordinator(self)
@@ -22,16 +23,17 @@ struct PageViewcOntroller<Page: View>: UIViewControllerRepresentable {
         )
         
         pageViewcontroller.dataSource = context.coordinator
+        pageViewcontroller.delegate = context.coordinator
         
         return pageViewcontroller
     }
     
     func updateUIViewController(_ pageViewController: UIPageViewController, context: Context) {
         pageViewController.setViewControllers(
-            [UIHostingController(rootView: pages[0])], direction: .forward, animated: true)
+            [UIHostingController(rootView: pages[currentPage])], direction: .forward, animated: true)
     }
     
-    class Coordinator: NSObject, UIPageViewControllerDataSource {
+    class Coordinator: NSObject, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
         var parent: PageViewcOntroller
         var controllers = [UIViewController]()
         
@@ -63,6 +65,19 @@ struct PageViewcOntroller<Page: View>: UIViewControllerRepresentable {
                 return controllers.first
             }
             return controllers[index + 1]
+        }
+        
+        func pageViewController(
+            _ pageViewController: UIPageViewController,
+            didFinishAnimating finished: Bool,
+            previousViewControllers: [UIViewController],
+            transitionCompleted completed: Bool
+        ) {
+            if completed,
+               let visibileVIewcontroller = pageViewController.viewControllers?.first,
+               let index = controllers.firstIndex(of: visibileVIewcontroller) {
+                parent.currentPage = index
+            }
         }
         
     }
