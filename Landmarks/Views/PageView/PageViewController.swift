@@ -8,7 +8,7 @@
 import SwiftUI
 import UIKit
 
-struct PageViewcOntroller<Page: View>: UIViewControllerRepresentable {
+struct PageViewController<Page: View>: UIViewControllerRepresentable {
     var pages: [Page]
     @Binding var currentPage: Int
     
@@ -17,15 +17,15 @@ struct PageViewcOntroller<Page: View>: UIViewControllerRepresentable {
     }
     
     func makeUIViewController(context: Context) -> UIPageViewController {
-        let pageViewcontroller = UIPageViewController(
+        let pageViewController = UIPageViewController(
             transitionStyle: .scroll,
             navigationOrientation: .horizontal
         )
         
-        pageViewcontroller.dataSource = context.coordinator
-        pageViewcontroller.delegate = context.coordinator
+        pageViewController.dataSource = context.coordinator
+        pageViewController.delegate = context.coordinator
         
-        return pageViewcontroller
+        return pageViewController
     }
     
     func updateUIViewController(_ pageViewController: UIPageViewController, context: Context) {
@@ -34,10 +34,10 @@ struct PageViewcOntroller<Page: View>: UIViewControllerRepresentable {
     }
     
     class Coordinator: NSObject, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
-        var parent: PageViewcOntroller
+        var parent: PageViewController
         var controllers = [UIViewController]()
         
-        init(_ pageViewController: PageViewcOntroller) {
+        init(_ pageViewController: PageViewController) {
             parent = pageViewController
         }
         
