@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		A52FA190296E46E000C5B821 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52FA18F296E46E000C5B821 /* PageView.swift */; };
+		A530A4DD2977749B00F37D54 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A530A4DC2977749B00F37D54 /* NotificationView.swift */; };
+		A530A4DF297775F300F37D54 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A530A4DE297775F300F37D54 /* NotificationController.swift */; };
+		A530A4E12977772300F37D54 /* PushNotificationPayload.apns in Resources */ = {isa = PBXBuildFile; fileRef = A530A4E02977772300F37D54 /* PushNotificationPayload.apns */; };
 		A53253FF296B984D002346B2 /* FeatureCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53253FE296B984D002346B2 /* FeatureCard.swift */; };
 		A542FB692966543C00BADCFC /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A542FB682966543C00BADCFC /* PageViewController.swift */; };
 		A560466D2936DF2B002A48E3 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A560466C2936DF2B002A48E3 /* ModelData.swift */; };
@@ -63,6 +66,9 @@
 
 /* Begin PBXFileReference section */
 		A52FA18F296E46E000C5B821 /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
+		A530A4DC2977749B00F37D54 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		A530A4DE297775F300F37D54 /* NotificationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		A530A4E02977772300F37D54 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		A53253FE296B984D002346B2 /* FeatureCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCard.swift; sourceTree = "<group>"; };
 		A542FB682966543C00BADCFC /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		A560466C2936DF2B002A48E3 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
@@ -186,6 +192,9 @@
 				A5A604B629760B81006EEC5F /* Assets.xcassets */,
 				A5A604B829760B81006EEC5F /* Preview Content */,
 				A5A604CA29761D14006EEC5F /* LandmarkDetail.swift */,
+				A530A4DC2977749B00F37D54 /* NotificationView.swift */,
+				A530A4DE297775F300F37D54 /* NotificationController.swift */,
+				A530A4E02977772300F37D54 /* PushNotificationPayload.apns */,
 			);
 			path = "WatchLandmarks Watch App";
 			sourceTree = "<group>";
@@ -376,6 +385,7 @@
 				A5A604C52976100E006EEC5F /* Assets.xcassets in Resources */,
 				A5A604C92976100E006EEC5F /* landmarkData.json in Resources */,
 				A5A604B729760B81006EEC5F /* Assets.xcassets in Resources */,
+				A530A4E12977772300F37D54 /* PushNotificationPayload.apns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,8 +416,10 @@
 				A5A604C72976100E006EEC5F /* Hike.swift in Sources */,
 				A5A604C02976100E006EEC5F /* LandmarkRow.swift in Sources */,
 				A5A604BE2976100E006EEC5F /* Landmark.swift in Sources */,
+				A530A4DF297775F300F37D54 /* NotificationController.swift in Sources */,
 				A5A604C82976100E006EEC5F /* CircleImage.swift in Sources */,
 				A5A604CB29761D14006EEC5F /* LandmarkDetail.swift in Sources */,
+				A530A4DD2977749B00F37D54 /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
