@@ -24,6 +24,7 @@
 		A523D217297C948B00F4A35B /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A560466C2936DF2B002A48E3 /* ModelData.swift */; };
 		A523D218297C948B00F4A35B /* LandmarkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A560467329382B99002A48E3 /* LandmarkList.swift */; };
 		A523D21A297C957F00F4A35B /* LandmarkDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A523D219297C957F00F4A35B /* LandmarkDetail.swift */; };
+		A523D222297F631D00F4A35B /* LandmarkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A523D221297F631D00F4A35B /* LandmarkList.swift */; };
 		A52FA190296E46E000C5B821 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52FA18F296E46E000C5B821 /* PageView.swift */; };
 		A530A4DD2977749B00F37D54 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A530A4DC2977749B00F37D54 /* NotificationView.swift */; };
 		A530A4DF297775F300F37D54 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A530A4DE297775F300F37D54 /* NotificationController.swift */; };
@@ -45,7 +46,6 @@
 		A5A604B729760B81006EEC5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5A604B629760B81006EEC5F /* Assets.xcassets */; };
 		A5A604BA29760B81006EEC5F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5A604B929760B81006EEC5F /* Preview Assets.xcassets */; };
 		A5A604BE2976100E006EEC5F /* Landmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ABC2CE2925A9B700AE0759 /* Landmark.swift */; };
-		A5A604BF2976100E006EEC5F /* LandmarkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A560467329382B99002A48E3 /* LandmarkList.swift */; };
 		A5A604C02976100E006EEC5F /* LandmarkRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A560467129382012002A48E3 /* LandmarkRow.swift */; };
 		A5A604C12976100E006EEC5F /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BE96A9295E672600A14B2B /* Profile.swift */; };
 		A5A604C22976100E006EEC5F /* LandmarksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F677BFB829187174002CCDCB /* LandmarksApp.swift */; };
@@ -88,6 +88,7 @@
 		A523D206297C917D00F4A35B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A523D208297C917D00F4A35B /* MacLandmarks.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacLandmarks.entitlements; sourceTree = "<group>"; };
 		A523D219297C957F00F4A35B /* LandmarkDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkDetail.swift; sourceTree = "<group>"; };
+		A523D221297F631D00F4A35B /* LandmarkList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkList.swift; sourceTree = "<group>"; };
 		A52FA18F296E46E000C5B821 /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
 		A530A4DC2977749B00F37D54 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		A530A4DE297775F300F37D54 /* NotificationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
@@ -180,6 +181,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		A523D21B297F5F3D00F4A35B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A5A604CA29761D14006EEC5F /* LandmarkDetail.swift */,
+				A523D221297F631D00F4A35B /* LandmarkList.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		A542FB672966541E00BADCFC /* PageView */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,7 +251,7 @@
 				A5A604B429760B81006EEC5F /* ContentView.swift */,
 				A5A604B629760B81006EEC5F /* Assets.xcassets */,
 				A5A604B829760B81006EEC5F /* Preview Content */,
-				A5A604CA29761D14006EEC5F /* LandmarkDetail.swift */,
+				A523D21B297F5F3D00F4A35B /* Views */,
 				A530A4DC2977749B00F37D54 /* NotificationView.swift */,
 				A530A4DE297775F300F37D54 /* NotificationController.swift */,
 				A530A4E02977772300F37D54 /* PushNotificationPayload.apns */,
@@ -514,8 +524,8 @@
 				A5A604C32976100E006EEC5F /* MapView.swift in Sources */,
 				A5A604B529760B81006EEC5F /* ContentView.swift in Sources */,
 				A5A604C22976100E006EEC5F /* LandmarksApp.swift in Sources */,
+				A523D222297F631D00F4A35B /* LandmarkList.swift in Sources */,
 				A5A604C12976100E006EEC5F /* Profile.swift in Sources */,
-				A5A604BF2976100E006EEC5F /* LandmarkList.swift in Sources */,
 				A5A604C62976100E006EEC5F /* ModelData.swift in Sources */,
 				A5A604C72976100E006EEC5F /* Hike.swift in Sources */,
 				A5A604C02976100E006EEC5F /* LandmarkRow.swift in Sources */,

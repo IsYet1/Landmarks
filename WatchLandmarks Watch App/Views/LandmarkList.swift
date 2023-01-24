@@ -32,19 +32,13 @@ struct LandmarkList: View {
                 }
             }
             .navigationTitle("Landmarks")
-            .frame(minWidth: 300)
         }
     }
 }
 
 struct LandmarkList_Previews: PreviewProvider {
     static var previews: some View {
-//        ForEach(["iPhone SE (2nd generation)", "iPhone XS Max", "iPhone 14 Pro"], id: \.self) {deviceName in
-        ForEach(["iPhone 14 Pro"], id: \.self) {deviceName in
-            LandmarkList()
-                .environmentObject(ModelData())
-                .previewDevice(PreviewDevice(rawValue: deviceName))
-                .previewDisplayName(deviceName)
-        }
+        LandmarkList()
+            .environmentObject(ModelData())
     }
 }
